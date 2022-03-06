@@ -1,5 +1,3 @@
-# testing without cogs first
-
 import discord
 from discord.ext import commands
 import os
