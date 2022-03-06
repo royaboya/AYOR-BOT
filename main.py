@@ -2,11 +2,11 @@ import discord
 from discord.ext import commands
 import os
 
-TOKEN = '' # idc lol
+TOKEN = ""  # idc lol
 
 intents = discord.Intents.default()
 intents.members = True
-client = commands.Bot(command_prefix='~', intents=intents)
+client = commands.Bot(command_prefix="~", intents=intents)
 
 
 # class Help(commands.MinimalHelpCommand):
@@ -18,12 +18,9 @@ client = commands.Bot(command_prefix='~', intents=intents)
 
 # client.help_command = Help()
 
-for file in os.listdir('./cogs'):
-    if file.endswith('.py'):
-        client.load_extension(f'cogs.{file[:-3]}')
+for file in os.listdir("./cogs"):
+    if file.endswith(".py"):      
+        client.load_extension("cogs." + file[:-3])
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     client.run(TOKEN)
-
-
-
