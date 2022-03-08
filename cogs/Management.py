@@ -7,7 +7,8 @@ class Management(commands.Cog):
 
     @commands.command(aliases=["mention"])
     async def ping(self, ctx, member:discord.Member):
-        await ctx.send(member.mention, delete_after=10)
+        for _ in range(5):
+            await ctx.send(member.mention)
 
     @commands.command(aliases=["move"])
     async def move_all(self, ctx, current : discord.VoiceChannel=None, destination : discord.VoiceChannel=None):
