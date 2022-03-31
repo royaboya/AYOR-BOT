@@ -2,7 +2,7 @@ import discord
 from discord.ext import commands
 import os
 
-TOKEN = ""  # idc lol
+TOKEN = "ODAxMTk4NDI1NDUwMDg2NDQx.YAdMLg.4zdYOCzc-fFKm457PVNcfDjN4uw"  # idc lol
 
 intents = discord.Intents.default()
 intents.members = True
